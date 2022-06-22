@@ -53,21 +53,6 @@ class DescriptionFragment : Fragment() {
 
         val args = argument.getParcelable<CommonHeroesStats>(COMMON_STATS) ?: throw IllegalArgumentException("null argument")
 
-        //TODO Плменять в 54 строке CommonHeroesStats на SuperHeroesReponse
-        //TODO Сделать получение данных из DescriptionViewModel через LiveData
-        //TODO ТУТ их замапить к CommonHeroesStats
-        //TODO Отобразить их
-
-        //TODO Сделать кнопки для переключения элемента(и 2 функции для этого)
-        //TODO в каждой из функций дергать ту функцию из viewModel для получение
-        // следующего/предыдущего героя(следующий id передавать в агрументы функции).
-
-
-
-//        else {
-//            DescriptionFragmentArgs.fromBundle(requireArguments()).commonHeroesStats
-//        }
-
         binding.apply {
 
             name.text = args.name

@@ -47,8 +47,7 @@ class DotaHeroesAdapter :
             return oldItem == newItem
         }
 
-    }//было бы правильнее это разбить на классы, вынести viewholder и diffutil отсюда,
-    // но для удобства оставил все тут, потому что маленькие проект
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroesViewHolder {
         return HeroesViewHolder(
@@ -62,7 +61,7 @@ class DotaHeroesAdapter :
 
     override fun onBindViewHolder(holder: HeroesViewHolder, position: Int) {
         holder.bind(getItem(position))
-        holder.itemView.setOnClickListener() {
+        holder.itemView.setOnClickListener {
             OnClickListener?.invoke(getItem(position))
         }
     }
